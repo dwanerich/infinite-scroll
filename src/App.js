@@ -3,6 +3,7 @@ import Infinite from './Infinite';
 import { react } from '@babel/types';
 import data from './data'
 import TopBar from './TopBar'
+import FooterBar from './FooterBar'
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Infinite data={data} />
       </header>
     </div>
+      <FooterBar />
     </>
   );
 }

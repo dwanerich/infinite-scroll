@@ -53,9 +53,9 @@
     outline: none;
     font-size: large;
     background-color: black;
-    color: white; 
+    color: white;
+    border-color: transparent;
 }
-
 
 .TodayButton {
   border-radius: 25px;
@@ -106,5 +106,17 @@
   padding-bottom: 15px;
   display: flex;
   justify-content: space-evenly;
+}
+
+.FooterBar {
+  position: fixed;
+  width: 100%;
+  background-color: transparent;
+  padding-bottom: 15px;
+  display: grid;
+  bottom:0;
+  right:0;
+text-align: right;
+/* vertical-align: middle; */
 }
 

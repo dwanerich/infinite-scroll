@@ -1,22 +1,17 @@
-import logo from './logo.svg';
 import './App.css';
+import Infinite from './Infinite';
+import { react } from '@babel/types';
+import data from './data'
+import TopBar from './TopBar'
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <h1>Welcome to The Infinite Scroll Challenge</h1>
+        <TopBar />
+
+        <Infinite data={data}/>
       </header>
     </div>
   );

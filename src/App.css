@@ -2,19 +2,8 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .App-header {
-  background-color: #ffffff;
+  background-color: white;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -22,6 +11,10 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: rgb(0, 0, 0);
+}
+
+.body {
+  margin-top: 85px;
 }
 
 .App-link {
@@ -38,11 +31,12 @@
 }
 
 .searchbar {
- border-radius: 25px;
-    background-color: rgb(223, 222, 219);
-    padding: 20px; 
+    border-radius: 25px;
+    background-color: rgb(233, 232, 231);
+    border-color: transparent;
+    padding: 18px; 
     width: 900px;
-    height: 10px;
+    height: 8px;
     outline: none;
     font-size: large;
 }
@@ -51,33 +45,66 @@
   background-color: rgb(201, 200, 200);
 }
 
-.HeaderButtons {
+.HomeButton {
   border-radius: 25px;
-    border: 2px solid rgb(15, 15, 15);
-    padding: 20px; 
-    width: 80px;
-    height: 15px;
+    padding: 0px; 
+    width: 90px;
+    height: 48px;
     outline: none;
     font-size: large;
     background-color: black;
-    color: white;
+    color: white; 
 }
 
-.HeaderButtons:hover {
-  background-color: rgb(255, 255, 255);
+
+.TodayButton {
+  border-radius: 25px;
+    padding: 0px; 
+    width: 90px;
+    height: 48px;
+    outline: none;
+    font-size: large;
+    color: rgb(0, 0, 0);
+    border-color: transparent;
+    background-color: transparent;
+}
+
+.TodayButton:hover {
+  background-color: rgb(223, 221, 221);
   color: black;
 }
 
 .pinCard {
  border-radius: 25px;
-    border: 2px solid rgb(15, 15, 15);
+    border: 2px;
+    background-color:rgb(190, 190, 190);
     /* padding: 20px;  */
     width: 250px;
     height: 400px;
     outline: none;
     font-size: large;
+    display: inline-grid;
+    margin-left: .5cm;
+    transition: 0.4s ease-out;
+}
+
+.pinCard:hover {
+  background-color: rgb(17, 15, 17);
+  color: black;
 }
 
 .pinImage {
   border-radius: 25px;
 }
+
+.TopBar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding-top: 20px;
+  background-color: white;
+  padding-bottom: 15px;
+  display: flex;
+  justify-content: space-evenly;
+}
+

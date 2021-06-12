@@ -1,6 +1,6 @@
 import { render } from '@testing-library/react';
 import React from 'react';
-import data from './data'
+import data from './data copy'
 
 class Pin extends React.Component {
     render() {

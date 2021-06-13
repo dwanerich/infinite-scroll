@@ -90,11 +90,16 @@
 
 .pinCard:hover {
   background-color: rgb(17, 15, 17);
-  color: black;
+  color: rgb(224, 222, 222);
 }
 
 .pinImage {
   border-radius: 25px;
+  width: 95%;
+  /* height: 15vw; */
+  height: 95%;
+  /* object-fit: cover; */
+  object-fit: cover;
 }
 
 .TopBar {
@@ -116,7 +121,10 @@
   display: grid;
   bottom:0;
   right:0;
-text-align: right;
-/* vertical-align: middle; */
+  text-align: right;
+}
+
+.icons {
+  color: gray;
 }
 

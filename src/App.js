@@ -1,23 +1,29 @@
 import './App.css';
 import Infinite from './Infinite';
-import { react } from '@babel/types';
+// import { react } from '@babel/types';
 import data from './data'
-import TopBar from './TopBar'
+// import TopBar from './TopBar'
 import FooterBar from './FooterBar'
+import React from "react"
 
-function App() {
-  return (
-      <>
-        <TopBar />
-    <div className="App">
-      <header className="App-header">
-        {/* <h1>Welcome to The Infinite Scroll Challenge</h1> */}
-        <Infinite data={data} />
-      </header>
-    </div>
-      <FooterBar />
-    </>
-  );
+class App extends React.Component {
+ 
+  render() {
+    return (
+      <div>
+        
+        {/* <TopBar /> */}
+
+        <div className="App">
+          <header className="App-header">
+            <Infinite data={data} />
+          </header>
+        </div>
+        <FooterBar />
+      </div>
+    );
+  }
+
 }
 
 export default App;

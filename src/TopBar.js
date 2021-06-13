@@ -20,19 +20,20 @@ class TopBar extends React.Component {
                 <button className="TodayButton">Today</button>
 
                 <SearchTool />
-                
-                <span class="material-icons" onClick={()=> (alert('No new notifications!'))}>
-                    notifications
-                </span>
 
-                <span class="material-icons">
-                    textsms
-                </span>
+                    <div className='icons'>
+                        <span class="material-icons" onClick={() => (alert('No new notifications!'))}>
+                            notifications
+                        </span>
 
-
-                <span class="material-icons">
-                    expand_more
-                </span>
+                        <span class="material-icons">
+                            textsms
+                        </span>
+                        
+                        <span class="material-icons">
+                            expand_more
+                        </span>
+                    </div>    
             </div>
 
             

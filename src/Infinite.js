@@ -3,24 +3,39 @@ import data from './data'
 
 
 class Infinite extends React.Component {
-    
+    // constructor(props) {
+    //     super(props)
 
+    // state = {}
+
+    handleScroll = (e) => {
+        const windowHeight = "innerHeight" in window ? window.innerHeight : document.documentElement.offsetHeight;
+        const body = document.body;
+        const html = document.documentElement;
+        const docHeight = Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight);
+        const windowBottom = windowHeight + window.pageYOffset;
+
+        if (windowBottom >= docHeight) {
+            console.log(alert('you hit the bottom'))
+        }
+    }
+
+    componentDidMount() {
+        window.addEventListener('scroll', this.handleScroll);
+    }
+
+    componentWillUnmount() {
+        window.removeEventListener('scroll', this.handleScroll);
+    }
+    
     render() {
         console.log(this.props)
         return (
             <div className='body'>
-                {/* <h1>JSON data goes here:</h1> */}
                 {data.map((pinDetail, index) =>{
                     return <div className='pinCard'>
-                        {pinDetail.description}
-                        {pinDetail.title}
-                        <img ref='image' src={pinDetail.image_signature} />
-                        <img ref="image" src={pinDetail.visual_description} />
-                        {pinDetail.repin_count}
 
-                        <ul>
-                            {pinDetail.provider_icon_url}
-                        </ul>
+                        <img ref='image' alt='' className='pinImage' src={pinDetail['images']['236x']['url']} />
 
                     </div>
                 })}

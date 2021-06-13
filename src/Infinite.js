@@ -5,6 +5,7 @@ import data from './data'
 class Infinite extends React.Component {
     // constructor(props) {
     //     super(props)
+    // }
 
     // state = {}
 
@@ -26,6 +27,7 @@ class Infinite extends React.Component {
 
     componentWillUnmount() {
         window.removeEventListener('scroll', this.handleScroll);
+ 
     }
     
     render() {

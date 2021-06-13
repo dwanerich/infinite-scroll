@@ -14,7 +14,7 @@ class TopBar extends React.Component {
         return (
             <div className='TopBar'>
 
-                <img src={pinlogo} height='39px'/>
+                <img src={pinlogo} alt='pin-logo' height='39px'/>
 
                 <button className="HomeButton">Home</button>
                 <button className="TodayButton">Today</button>

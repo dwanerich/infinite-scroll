@@ -1,13 +1,10 @@
 import React from 'react'
-import data from './data'
+// import data from './data'
 
 
 class Infinite extends React.Component {
-    // constructor(props) {
-    //     super(props)
-    // }
 
-    // state = {}
+    // METHOD LISTENS FOR SCROLL TO REACH BOTTOM OF WINDOW
 
     handleScroll = (e) => {
         const windowHeight = "innerHeight" in window ? window.innerHeight : document.documentElement.offsetHeight;
@@ -17,9 +14,11 @@ class Infinite extends React.Component {
         const windowBottom = windowHeight + window.pageYOffset;
 
         if (windowBottom >= docHeight) {
-            console.log(alert('you hit the bottom'))
+            this.props.fetchData()
         }
     }
+    
+    //  LIFECYCLE METHODS 
 
     componentDidMount() {
         window.addEventListener('scroll', this.handleScroll);
@@ -34,10 +33,14 @@ class Infinite extends React.Component {
         console.log(this.props)
         return (
             <div className='body'>
-                {data.map((pinDetail, index) =>{
+
+                {/*  MAPPING THRU JSON TO DISPLAY IMAGES & LIKES ATTRIBUTES ON PIN CARDS*/}
+
+                {this.props.data.map((pinDetail, index) =>{
                     return <div className='pinCard'>
 
                         <img ref='image' alt='' className='pinImage' src={pinDetail['images']['236x']['url']} />
+                        <h4>{pinDetail['like_count']}</h4>
 
                     </div>
                 })}

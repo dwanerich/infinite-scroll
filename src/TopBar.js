@@ -14,14 +14,23 @@ class TopBar extends React.Component {
         return (
             <div className='TopBar'>
 
+                {/* PINTEREST LOGO */}
+
                 <img src={pinlogo} alt='pin-logo' height='39px'/>
+
+                {/* HOME & TODAY BUTTON */}
 
                 <button className="HomeButton">Home</button>
                 <button className="TodayButton">Today</button>
 
-                <SearchTool />
+                {/* SEARCH INPUT FIELD */}
+
+                {/* <SearchTool /> */}
 
                     <div className='icons'>
+
+                        {/* NOTIFICATIONS, MESSAGES EXPAND ICONS  */}
+
                         <span class="material-icons" onClick={() => (alert('No new notifications!'))}>
                             notifications
                         </span>

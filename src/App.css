@@ -78,7 +78,7 @@
 .pinCard {
  border-radius: 25px;
     border: 2px;
-    background-color:rgb(190, 190, 190);
+    background-color:transparent;
     width: 250px;
     height: 400px;
     outline: none;

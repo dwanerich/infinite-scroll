@@ -1,10 +1,10 @@
 import React from 'react'
 import './App.css';
-import TopBar from './TopBar'
+// import TopBar from './TopBar'
 import Infinite from './Infinite';
 import data from './data'
 import FooterBar from './FooterBar'
-// import SearchTool from './SearchTool'
+import SearchTool from './SearchTool'
 
 class App extends React.Component {
 

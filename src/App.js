@@ -4,7 +4,7 @@ import TopBar from './TopBar'
 import Infinite from './Infinite';
 import data from './data'
 import FooterBar from './FooterBar'
-import SearchTool from './SearchTool'
+// import SearchTool from './SearchTool'
 
 class App extends React.Component {
 
@@ -13,8 +13,7 @@ class App extends React.Component {
   state = {
     offset: 5,
     data: data.slice(0, 6),
-    inputValue: '',
-    results: {}
+    inputValue: ''
   }
 
   // FUNCTION THAT RETRIEVES THE NEXT SET OF DATA WHEN BOTTOM OF PAGE SCROLL IS DETECTED

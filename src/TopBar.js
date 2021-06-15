@@ -25,7 +25,7 @@ class TopBar extends React.Component {
 
                 {/* SEARCH INPUT FIELD */}
 
-                {/* <SearchTool /> */}
+                <SearchTool />
 
                     <div className='icons'>
 
